@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CareerConnect - Job Portal</title>
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+/* ===== General ===== */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+    url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* ===== Cards ===== */
+.card {
+    border: none;
+    transition: all .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+/* ===== Company Boxes ===== */
+.company-box {
+    transition: 0.3s;
+}
+
+.company-box:hover {
+    transform: scale(1.05);
+}
+
+/* ===== Form ===== */
+.application-form {
+    max-width: 800px;
+    margin: auto;
+}
+
+/* ===== Footer ===== */
+footer i {
+    font-size: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+footer i:hover {
+    color: #0d6efd;
+}
+
+/* ===== Section Titles ===== */
+.section-title {
+    font-weight: bold;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #0d6efd;
+    display: block;
+    margin: 10px auto;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+            <i class="fa-solid fa-briefcase"></i> CareerConnect
+        </a>
+
+        <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#jobs">Jobs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#companies">Companies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#apply">Apply</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- ================= HERO SECTION ================= -->
+<section class="hero text-white">
+    <div class="container">
+        <h1>Find Your Dream Job</h1>
+        <p>Connect with top companies and build your career today.</p>
+
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-6">
+                <input type="text"
+                    class="form-control form-control-lg"
+                    placeholder="Search jobs, companies...">
+            </div>
+        </div>
+
+        <button class="btn btn-warning btn-lg mt-4">
+            Explore Jobs
+        </button>
+    </div>
+</section>
+
+<!-- ================= JOBS ================= -->
+<section id="jobs" class="container py-5">
+    <h2 class="text-center section-title">Latest Job Openings</h2>
+
+    <div class="row g-4">
+
+        <!-- Job 1 -->
+        <div class="col-md-4">
+            <div class="card shadow-lg rounded-4">
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600"
+                    class="card-img-top"
+                    alt="Frontend Developer">
+
+                <div class="card-body">
+                    <h4>Frontend Developer</h4>
+                    <p>
+                        <i class="fa-solid fa-building text-primary"></i>
+                        TechNova
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot text-danger"></i>
+                        Mumbai
+                    </p>
+
+                    <button class="btn btn-primary w-100">
+                        Apply Now
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Job 2 -->
+        <div class="col-md-4">
+            <div class="card shadow-lg rounded-4">
+                <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?w=600"
+                    class="card-img-top"
+                    alt="Designer">
+
+                <div class="card-body">
+                    <h4>UI/UX Designer</h4>
+                    <p>
+                        <i class="fa-solid fa-building text-primary"></i>
+                        Creative Labs
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot text-danger"></i>
+                        Pune
+                    </p>
+
+                    <button class="btn btn-primary w-100">
+                        Apply Now
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Job 3 -->
+        <div class="col-md-4">
+            <div class="card shadow-lg rounded-4">
+                <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600"
+                    class="card-img-top"
+                    alt="Backend Developer">
+
+                <div class="card-body">
+                    <h4>Backend Developer</h4>
+                    <p>
+                        <i class="fa-solid fa-building text-primary"></i>
+                        CloudSoft
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-location-dot text-danger"></i>
+                        Bengaluru
+                    </p>
+
+                    <button class="btn btn-primary w-100">
+                        Apply Now
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- ================= COMPANIES ================= -->
+<section id="companies" class="bg-light py-5">
+    <div class="container">
+
+        <h2 class="text-center section-title">
+            Featured Companies
+        </h2>
+
+        <div class="row g-4 text-center">
+
+            <div class="col-md-4">
+                <div class="bg-white p-4 rounded-4 shadow company-box">
+                    <i class="fa-solid fa-laptop-code fa-4x text-primary"></i>
+                    <h4 class="mt-3">TechNova</h4>
+                    <p>
+                        Leading software development company specializing in web and mobile solutions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="bg-white p-4 rounded-4 shadow company-box">
+                    <i class="fa-solid fa-palette fa-4x text-danger"></i>
+                    <h4 class="mt-3">Creative Labs</h4>
+                    <p>
+                        Innovative UI/UX design and branding agency creating world-class products.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="bg-white p-4 rounded-4 shadow company-box">
+                    <i class="fa-solid fa-cloud fa-4x text-success"></i>
+                    <h4 class="mt-3">CloudSoft</h4>
+                    <p>
+                        Enterprise cloud solutions provider helping businesses scale globally.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= APPLICATION FORM ================= -->
+<section id="apply" class="container py-5">
+
+    <h2 class="text-center section-title">
+        Apply for a Job
+    </h2>
+
+    <form class="application-form bg-white shadow-lg p-5 rounded-4">
+
+        <div class="mb-3">
+            <label class="form-label">Full Name</label>
+            <input type="text"
+                class="form-control"
+                placeholder="Enter your name">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Email Address</label>
+            <input type="email"
+                class="form-control"
+                placeholder="Enter your email">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Select Job Position</label>
+
+            <select class="form-select">
+                <option>Frontend Developer</option>
+                <option>UI/UX Designer</option>
+                <option>Backend Developer</option>
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Upload Resume</label>
+            <input type="file" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea rows="4"
+                class="form-control"
+                placeholder="Write a short introduction"></textarea>
+        </div>
+
+        <button class="btn btn-success btn-lg w-100">
+            Submit Application
+        </button>
+
+    </form>
+</section>
+
+<!-- ================= STATS SECTION ================= -->
+<section class="bg-primary text-white py-5">
+    <div class="container">
+        <div class="row text-center">
+
+            <div class="col-md-3">
+                <h1>500+</h1>
+                <p>Jobs Available</p>
+            </div>
+
+            <div class="col-md-3">
+                <h1>120+</h1>
+                <p>Companies</p>
+            </div>
+
+            <div class="col-md-3">
+                <h1>10K+</h1>
+                <p>Applicants</p>
+            </div>
+
+            <div class="col-md-3">
+                <h1>95%</h1>
+                <p>Success Rate</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-dark text-white text-center py-4">
+    <h4>CareerConnect</h4>
+
+    <p>
+        Connecting Talent with Opportunity
+    </p>
+
+    <div class="mb-3">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-linkedin"></i>
+        <i class="fab fa-instagram"></i>
+    </div>
+
+    <p class="mb-0">
+        © 2026 CareerConnect. All Rights Reserved.
+    </p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
